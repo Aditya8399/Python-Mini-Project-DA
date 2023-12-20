@@ -7,7 +7,7 @@ import streamlit as st  # pip install streamlit
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Sales Dashboard", page_icon=":bar_chart:", layout="wide")
 
-# ---- READ EXCEL ----
+# ---- READ EXCEL -----
 @st.cache_data
 def get_data_from_excel():
     df = pd.read_excel(
@@ -24,7 +24,7 @@ def get_data_from_excel():
 
 df = get_data_from_excel()
 
-# ---- SIDEBAR ----
+# ---- SIDEBAR ------
 st.sidebar.header("Please Filter Here:")
 city = st.sidebar.multiselect(
     "Select the City:",
